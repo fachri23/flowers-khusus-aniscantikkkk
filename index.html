@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>alooo sayangkuuu cintakuuu dedekuuu
+    <br>loveee uuuu mwahhhh</br></title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bcground bunga.jpg');
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+
+  .container {
+    text-align: center;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2em;
+    color: #ff69da;
+    margin: 0;
+  }
+
+  .flower {
+    position: absolute;
+    background-image: url(1.webp);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation: float 15s linear infinite;
+  }
+  .flower1 {
+    position: absolute;
+    background-image: url(09-21-09-506__480.webp);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation: float 15s linear infinite;
+  }
+
+  .flower2 {
+    position: absolute;
+    background-image: url(love_PNG7.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation: float 15s linear infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>alooo sayangkuuu cintakuuu dedekuuu
+    <br>loveee uuuu mwahhhh</br>
+  </h1>
+</div>
+<script>
+  function createFlower() {
+    const flower = document.createElement('div');
+    flower.classList.add('flower');
+    flower.style.left = Math.random() * 100 + 'vw';
+    flower.style.animationDuration = Math.random() * 1 + 4 + 's';
+    document.body.appendChild(flower);
+
+    const flower1 = document.createElement('div');
+    flower1.classList.add('flower1');
+    flower1.style.left = Math.random() * 100 + 'vw';
+    flower1.style.animationDuration = Math.random() * 1 + 4 + 's';
+    document.body.appendChild(flower1);
+
+    const flower2 = document.createElement('div');
+    flower2.classList.add('flower2');
+    flower2.style.left = Math.random() * 100 + 'vw';
+    flower2.style.animationDuration = Math.random() * 1 + 4 + 's';
+    document.body.appendChild(flower2);
+
+    setTimeout(() => {
+      flower.remove();
+      flower1.remove();
+      flower2.remove();
+    }, 15000);
+  }
+
+  setInterval(createFlower, 500);
+</script>
+</body>
+</html>
